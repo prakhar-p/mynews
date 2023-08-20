@@ -19,7 +19,6 @@ class _SearchState extends State<Search> {
   List<Article> search = [];
   late String searchnews;
   bool _loading = false;
-  String query = "";
   TextEditingController textEditingController = new TextEditingController();
 
   @override
@@ -82,7 +81,7 @@ class _SearchState extends State<Search> {
                       });
                       search = [];
                       String url =
-                          "https://newsapi.org/v2/everything?q=${textEditingController}&from=2023-08-19&sortBy=popularity&apiKey=643e2a6e43384fc7a3ba4db87ce8c803";
+                          "https://newsapi.org/v2/everything?q=${textEditingController}&from=2023-08-19&sortBy=popularity&apiKey={API KEY}";
                       var response = await http.get(url);
                       Map<String, dynamic> jsonData = jsonDecode(response.body);
                       jsonData["hits"].forEach((element) {
