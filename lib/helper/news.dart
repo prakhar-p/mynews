@@ -10,7 +10,7 @@ class News {
 
   Future<void> getNews() async{
 
-    String url = "http://newsapi.org/v2/top-headlines?country=in&excludeDomains=stackoverflow.com&sortBy=publishedAt&language=en&apiKey=643e2a6e43384fc7a3ba4db87ce8c803";
+    String url = "http://newsapi.org/v2/top-headlines?country=in&excludeDomains=stackoverflow.com&sortBy=publishedAt&language=en&apiKey={API KEY}";
 
     var response = await http.get(url);
 
@@ -48,7 +48,7 @@ class NewsForCategorie {
   Future<void> getNewsForCategory(String category) async{
 
     /*String url = "http://newsapi.org/v2/everything?q=$category&apiKey=${apiKey}";*/
-    String url = "http://newsapi.org/v2/top-headlines?country=in&category=$category&apiKey=643e2a6e43384fc7a3ba4db87ce8c803";
+    String url = "http://newsapi.org/v2/top-headlines?country=in&category=$category&apiKey={API KEY}";
 
     var response = await http.get(url);
 
@@ -85,7 +85,7 @@ class Search_news{
 
   Future<void> getSearchNews() async{
     print(input);
-    String url = "https://newsapi.org/v2/everything?q=$input&from=2023-08-19&sortBy=popularity&apiKey=643e2a6e43384fc7a3ba4db87ce8c803";
+    String url = "https://newsapi.org/v2/everything?q=$input&from=2023-08-19&sortBy=popularity&apiKey={API KEY}";
 
     var response = await http.get(url);
 
